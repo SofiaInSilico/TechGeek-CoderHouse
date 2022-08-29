@@ -5,10 +5,10 @@ import Footer from './assets/Footer';
 import NavBar from './assets/NavBar';
 
 function App() {
-  let imagen = './assets/imagenes/ipad.jpg';
-  let titulo = "Ipad Air";
-  let slogan = "Potencia en todos sus colores.";
-  let description = "Con los superpoderes del chip M1 de Apple. Cámara frontal ultra gran angular de 12 MP con Encuadre Centrado. Funciona con el Apple Pencil y el Magic Keyboard. Cinco colores increíbles.";
+  // let imagen = './assets/imagenes/ipad.jpg';
+  // let titulo = "Ipad Air";
+  // let slogan = "Potencia en todos sus colores.";
+  // let description = "Con los superpoderes del chip M1 de Apple. Cámara frontal ultra gran angular de 12 MP con Encuadre Centrado. Funciona con el Apple Pencil y el Magic Keyboard. Cinco colores increíbles.";
   
   const productos = [
     { id: 1, nombre: "Ipad Air", precio: "599 usd" },
@@ -29,7 +29,7 @@ function App() {
         ))
       }
       </ul>
-      <div className="container">
+      {/* <div className="container">
       <div className="row">
         <div className='col-md-4 offset-md-2'>
           <img src={imagen} alt={titulo} className= "img-fluid"/>
@@ -41,7 +41,7 @@ function App() {
           <p>{description}</p>
           </div>
       </div>
-    </div>
+    </div> */}
     <Footer />
     </div>
     

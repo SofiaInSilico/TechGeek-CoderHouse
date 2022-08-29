@@ -6,8 +6,6 @@ const Header = () => {
         <div>
             <hr />
             <br />
-            <p>Header</p>
-            <br />
             <hr />
         </div>
     )
