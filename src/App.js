@@ -1,9 +1,9 @@
 import './App.css';
 import 'core-js/actual'; 
-import Header from './assets/Header';
-import Footer from './assets/Footer';
-import NavBar from './assets/NavBar';
-import ItemListContainer from './assets/ItemListContainer';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import NavBar from './components/NavBar';
+import ItemListContainer from './components/ItemListContainer';
 
 function App() {
   
