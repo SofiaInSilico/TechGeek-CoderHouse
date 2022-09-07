@@ -5,6 +5,16 @@ import Footer from './components/Footer';
 import NavBar from './components/NavBar';
 import ItemListContainer from './components/ItemListContainer';
 
+function enviaMensaje (){
+  console.log('Botón clickeado');
+}
+
+const SuperButton = () => {
+  return (
+    <input type='button' value='Soy un botón! clickéame!' onClick={enviaMensaje} />
+  )
+}
+
 function App() {
   
   const productos = [
@@ -18,6 +28,7 @@ function App() {
     <div>
       <NavBar />
       <ItemListContainer greeting='Platafoma de venta de productos tecnológicos'/>
+      <SuperButton />
       <h3>Nuestros productos</h3>
       <ul>
       {
@@ -32,5 +43,7 @@ function App() {
     
   );
 }
+
+
 
 export default App;
