@@ -37,8 +37,6 @@ function App() {
       <NavBar />
       <br />
       <ItemListContainer greeting='Platafoma de venta de productos tecnológicos' />
-      <br />
-      <ItemCount />
       <h3>Nuestros productos</h3>
       <ul>
         {
@@ -49,7 +47,7 @@ function App() {
       </ul>
       <br />
       <Precios />
-      <br />
+      <ItemCount stock= {10} initial={1} onAdd={0}/>
       <Footer />
     </div>
 
