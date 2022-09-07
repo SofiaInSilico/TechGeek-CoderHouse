@@ -13,14 +13,16 @@ const ItemCount = ({ stock, initial, onAdd }) => {
 
     const [fecha, setFecha] = useState(new Date());
     const subtractAmount = (valor) => {
-       if (valor > -1) {
-        setCantidad(valor);
-       }
-
+       if (valor > -1) {setCantidad(valor);}
     }
-
     const addAmount = (valor) => {
         if (valor <= stockProducto) {setCantidad(valor);}
+    }
+    const agregarProductos = () => {
+        if (stockProducto > 0) {        
+            setStockProducto(stockProducto - cantidad);
+            setAddProducto(addProducto + cantidad);
+        }
     }
 
     return (
@@ -40,15 +42,16 @@ const ItemCount = ({ stock, initial, onAdd }) => {
                         <div className='pt-2'>
                             <input className="btn btn-dark" type="submit" value="Agregar al carrito" onClick={() => {
                                 setFecha(new Date());
+                                agregarProductos()
                             }} />
                         </div>
                         
                     </div>
                 </div>
             </div>
-            <p>Stock: {stockProducto}</p>
-            <p>Cantidad de productos agregados: {addProducto}</p>
-            <p> Fecha : {fecha.getDate()}/{fecha.getMonth()}/{fecha.getFullYear()}  {fecha.getHours()}:{fecha.getMinutes()}:{fecha.getSeconds()}</p>
+            <p> Cantidad de productos agregados: {addProducto}</p>
+            <p> Productos restantes: {stockProducto}</p>
+            <p> Fecha: {fecha.getDate()}/{fecha.getMonth()}/{fecha.getFullYear()}  {fecha.getHours()}:{fecha.getMinutes()}:{fecha.getSeconds()}</p>
         </div>
 
     );
