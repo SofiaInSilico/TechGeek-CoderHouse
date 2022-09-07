@@ -4,6 +4,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import NavBar from './components/NavBar';
 import ItemListContainer from './components/ItemListContainer';
+import { useState } from 'react';
 
 function enviaMensaje (){
   console.log('Botón clickeado');
@@ -13,6 +14,18 @@ const SuperButton = () => {
   return (
     <input type='button' value='Soy un botón! clickéame!' onClick={enviaMensaje} />
   )
+}
+
+const Precios = () => {
+  const [precio, setPrecio] = useState ('inicial: 599 usd');
+  return (
+    <div onClick = {()=> {setPrecio('en oferta!: 500 usd')}}>
+      <h1> Imperdibles!</h1>
+      <h3> Ipad Air</h3>
+      <p>Clickea el precio y verás nuestras ofertas!</p>
+      <h5> Precio {precio}</h5>
+    </div>
+  );
 }
 
 function App() {
@@ -26,8 +39,11 @@ function App() {
 ]
   return (
     <div>
+      <br />
       <NavBar />
+      <br />
       <ItemListContainer greeting='Platafoma de venta de productos tecnológicos'/>
+      <br />
       <SuperButton />
       <h3>Nuestros productos</h3>
       <ul>
@@ -37,7 +53,9 @@ function App() {
         ))
       }
       </ul>
-
+      <br />
+      <Precios />
+      <br />
     <Footer />
     </div>
     
