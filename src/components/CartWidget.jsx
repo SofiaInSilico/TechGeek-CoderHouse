@@ -2,7 +2,7 @@ import React from "react";
 
 
 const CartWidget  = () => {
-    let descripcion = 'Ícono de carrito de compras';
+    let descripcion = 'Ícono';
     let imagen = "./src/assets/imagenes/iconocart.png";
 
     return (
