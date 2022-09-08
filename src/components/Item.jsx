@@ -2,7 +2,7 @@ import React from "react";
 
 const Item = ({nombre, imagen, precio}) => {
     return (
-        <div className='col-md-3 py-2'>
+        <div className='card'>
             <div className="card border-dark mb-3" style="width: 18rem;">
                 <img src={imagen} className="card-img-top" alt={nombre} />
                     <div className="card-body">

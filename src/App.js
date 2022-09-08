@@ -1,6 +1,5 @@
 import './App.css';
 import 'core-js/actual';
-import Header from './components/Header';
 import Footer from './components/Footer';
 import NavBar from './components/NavBar';
 import ItemListContainer from './components/ItemListContainer';
@@ -33,7 +32,7 @@ function App() {
       <h3>Nuestros productos</h3>
       <br />
       <Precios />
-      <ItemListContainer/>
+      <ItemListContainer />
       <ItemCount stock= {10} initial={1} onAdd={0}/>
       <Footer />
     </div>
