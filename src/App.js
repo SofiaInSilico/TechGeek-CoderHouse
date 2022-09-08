@@ -14,8 +14,8 @@ const Precios = () => {
   return (
     <div onClick={() => { setPrecio('en oferta!: 500 usd') }}>
       <h1> Imperdibles!</h1>
-      <h3> Ipad Air</h3>
       <p>Clickea el precio y verás nuestras ofertas!</p>
+      <h4> Ipad Air</h4>
       <h5> Precio {precio}</h5>
     </div>
   );
@@ -25,28 +25,15 @@ const Precios = () => {
 
 function App() {
 
-  const productos = [
-    { id: 1, nombre: "Ipad Air", precio: "599 usd" },
-    { id: 2, nombre: "Iphone 11", precio: "480 usd" },
-    { id: 3, nombre: "Notebook Lenovo", precio: "450 usd" },
-    { id: 4, nombre: "Audífonos Razer Kraken", precio: "50 usd" },
-    { id: 5, nombre: "Tablet Samsung", precio: "250 usd" },
-  ]
+  
   return (
     <div>
       <NavBar />
       <br />
-      <ItemListContainer greeting='Platafoma de venta de productos tecnológicos' />
       <h3>Nuestros productos</h3>
-      <ul>
-        {
-          productos.map(item => (
-            <li key={item.id}>{item.nombre} - {item.precio}</li>
-          ))
-        }
-      </ul>
       <br />
       <Precios />
+      <ItemListContainer/>
       <ItemCount stock= {10} initial={1} onAdd={0}/>
       <Footer />
     </div>
