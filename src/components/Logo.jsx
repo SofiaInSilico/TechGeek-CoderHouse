@@ -1,5 +1,5 @@
 import React from "react";
-import imagen from "../assets/imagenes/logonegro.png";
+import imagen from "../assets/imagenes/TECH GEEK.png";
 
 
 const Logo  = () => {
@@ -7,7 +7,7 @@ const Logo  = () => {
     
     return (
         <div>
-            <img src={imagen} alt={descripcion} styles={'max-widht:30px'}/>
+            <img src={imagen} alt={descripcion} />
         </div>
     )
 }

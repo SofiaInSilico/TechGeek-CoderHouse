@@ -2,9 +2,10 @@ import React from "react";
 
 const Footer = () => {
     return(
-        <div>
+        <div className='color'>
             <hr />
-            <p>InSilico 2022</p>
+            <p>© Copyright InSilico 2022</p>
+            <p>All rights reserved</p>
         </div>
     )
 }

@@ -5,13 +5,14 @@ import NavBar from './components/NavBar';
 import ItemListContainer from './components/ItemListContainer';
 import ItemCount from './components/ItemCount';
 import { useState } from 'react';
+import ImgInicial from './components/ImgInicial';
 
 
 
 const Precios = () => {
   const [precio, setPrecio] = useState('inicial: 599 usd');
   return (
-    <div onClick={() => { setPrecio('en oferta!: 500 usd') }}>
+    <div className='color' onClick={() => { setPrecio('en oferta!: 500 usd') }}>
       <h1> Imperdibles!</h1>
       <p>Clickea el precio y verás nuestras ofertas!</p>
       <h4> Ipad Air</h4>
@@ -28,8 +29,9 @@ function App() {
   return (
     <div>
       <NavBar />
+      <ImgInicial />
       <br />
-      <h3>Nuestros productos</h3>
+      <h3 className='color'>Nuestros productos</h3>
       <br />
       <Precios />
       <ItemListContainer />
