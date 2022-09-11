@@ -1,10 +1,10 @@
 import React from "react";
+import imagen from "../assets/imagenes/iconocart.png";
 
 
 const CartWidget  = () => {
     let descripcion = 'Ícono';
-    let imagen = "./src/assets/imagenes/iconocart.png";
-
+    
     return (
         <div>
             <img src={imagen} alt={descripcion} className= "img-fluid"/>

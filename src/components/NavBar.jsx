@@ -1,14 +1,16 @@
 import React from "react";
-import CartWidget from "./CartWidget";
+// import CartWidget from "./CartWidget";
+import Logo from "./Logo";
 
 
 const NavBar = () => {
     return (
         <div >
-                <nav className="navbar navbar-expand-lg bg-dark ">
+                <nav className="navbar navbar-expand-lg  ">
                     <div className="container-fluid">
                         <a className="navbar-brand text-white" href="#"> 
-                        <CartWidget /> 
+                        {/* <CartWidget />  */}
+                        <Logo />
                         Tech Geek </a>
                         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                             <span className="navbar-toggler-icon"></span>
