@@ -61,3 +61,22 @@
 
                         {/* <p><strong>{greeting}</strong></p> */}
                         greeting='Platafoma de venta de productos tecnológicos' 
+                        {/* 
+        <div className="row">
+            <div class="card" style="width: 18rem;">
+                <img src={item.img} class="card-img-top" alt={item.title} />
+                    <div class="card-body">
+                        <h5 class="card-title">{item.title}</h5>
+                        <p class="card-text">{item.price}</p>
+                        <p class="card-text">{item.desciption}</p>
+                        <a href="#" class="btn btn-primary">Comprar</a>
+                    </div>
+                    <ItemCount stock={item.stock} initial={1} />
+            </div>
+        </div> */}
+
+            // fetch('https://api.mercadolibre.com/sites/MLA/search?q=gamer&limit=20')
+    //   .then((respuesta) => respuesta.json())
+    //   .then((data) => {
+    //     setItems(data.results);
+    //   });

@@ -27,11 +27,10 @@ const ItemCount = ({ stock, initial, onAdd }) => {
 
     return (
 
-        <div className='color'>
+        <div>
             <div className='container py-2'>
                 <div className='row'>
                     <div className='col-md-2'>
-                        <p className='text-center'>Producto</p>
                         <div className="btn-group" role="group" aria-label="Basic outlined example">
                             <button type="button" className="btn btn-outline-primary" onClick={() => 
                             {subtractAmount(cantidad - 1)}}>-</button>

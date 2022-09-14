@@ -1,6 +1,6 @@
 import React from "react";
 
-const ItemDCard = ({item}) => {
+const ItemFetch = ({item}) => {
     return (
     <div className="card">
                 <img src={item.thumbnail} className="card-img-top" alt={item.title} />
@@ -13,4 +13,4 @@ const ItemDCard = ({item}) => {
             );
 };
 
-export default ItemDCard;
+export default ItemFetch;

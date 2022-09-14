@@ -7,6 +7,7 @@ import ItemCount from './components/ItemCount';
 // import { useState } from 'react';
 import ImgInicial from './components/ImgInicial';
 import ItemDetailContainer from './components/ItemDetailContainer';
+import ItemListCFetch from './components/Fetch/ItemListCFetch';
 
 
 
@@ -25,8 +26,6 @@ import ItemDetailContainer from './components/ItemDetailContainer';
 
 
 function App() {
-
-  
   return (
     <div>
       <NavBar />
@@ -34,13 +33,11 @@ function App() {
       <br />
       <h3 className='color margen'>Nuestros productos</h3>
       <br />
-      {/* <Precios /> */}
       <ItemDetailContainer />
       <ItemListContainer />
-      <ItemCount stock= {10} initial={1} onAdd={0}/>
+      <ItemListCFetch />
       <Footer />
     </div>
-
   );
 }
 

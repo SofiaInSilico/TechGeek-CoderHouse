@@ -6,16 +6,10 @@ const ItemList = ({items}) => {
         <div className="row">
             {items.map 
             (item => (<div key={item.id} className="col-md-5 py-3">
-                    <Item nombre={item.nombre} imagen={item.imagen} precio={item.precio} descripcion={item.descripcion}/>
+                    <Item nombre={item.title} imagen={item.img} precio={item.price} descripcion={item.description}/>
                 </div>))}
         </div>
     );
-
-    //     <div>
-    //     <ul>{items.map(item => <li key={item.id}> <Item nombre={item.nombre} imagen={item.imagen} precio={item.precio} /> </li>)}</ul>
-    //   </div>
-
-
 }
 
 export default ItemList;

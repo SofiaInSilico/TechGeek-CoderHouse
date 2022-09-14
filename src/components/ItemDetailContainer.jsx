@@ -1,25 +1,35 @@
 import React from 'react';
 import { useState } from 'react';
 import { useEffect } from 'react';
+import { productos } from './mock/productos';
 import ItemDetail from './ItemDetail';
 
 const ItemDetailContainer = () => {
-  const [items, setItems] = useState([]);
-  useEffect(() => {
-    fetch('https://api.mercadolibre.com/sites/MLA/search?q=gamer&limit=20')
-      .then((respuesta) => respuesta.json())
-      .then((data) => {
-        // console.log(data.results);
-        setItems(data.results);
-      });
-      
-  }, []);
+    const [item, setItem] = useState({});
 
-  return (
-    <div className="container">
-      <ItemDetail items={items} />
-    </div>
-  );
+    useEffect(() => {
+        const getItem = () =>
+            new Promise((res, rej) => {
+                const producto = productos.find((prod) => prod.id === 1)
+                setTimeout(() => {
+                    res(producto)
+                }, 2000)
+            })
+        getItem()
+            .then((respuesta) => {
+                setItem(respuesta);
+            })
+            .catch((error) => {
+                console.log(error);
+            })
+
+    }, []);
+
+    return (
+        <div className="container">
+            <ItemDetail item={item} />
+        </div>
+    );
 };
 
 export default ItemDetailContainer;
