@@ -17,7 +17,7 @@ const ItemListContainer = () => {
         const getProd = new Promise((resolve) => {
             setTimeout(() => {
                 resolve(productos);
-            }, 2000);  //después de los dos segundos, se va a blanco -> ItemList parece tener un problema, pero no lo logro encontrar!
+            }, 2000);  
         });
 
         getProd.then((respuesta) => {

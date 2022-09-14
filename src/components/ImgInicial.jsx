@@ -5,7 +5,7 @@ const ImgInicial = () => {
 
     return (
         <div>
-            <img src={primeraimg} class="img-fluid" alt="Game On"></img>
+            <img src={primeraimg} className="img-fluid" alt="Game On"></img>
         </div>
     )
 }
