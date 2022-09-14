@@ -1,5 +1,5 @@
 import React from "react";
-import primeraimg from "../assets/imagenes/Game On.png";
+import primeraimg from "../assets/imagenes/Game On2.png";
 
 const ImgInicial = () => {
 

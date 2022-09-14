@@ -18,7 +18,7 @@ const NavBar = () => {
                             <div className="navbar-nav">
                                 <a className="nav-link active text-white" aria-current="page" href="#">Inicio</a>
                                 <a className="nav-link text-white" href="#">Nosotros</a>
-                                <a className="nav-link text-white" href="#">Más productos</a>
+                                <a className="nav-link text-white" href="#">Nuestros productos</a>
                             </div>
                         </div>
                     </div>
