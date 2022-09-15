@@ -20,7 +20,7 @@ function App() {
         <Route exact path='/category/:id' element={<ItemListContainer />} />
         <Route exact path='/item/:id' element={<ItemDetailContainer />} />
       </Routes>
-      <h3 className='color margen'>Mira también:</h3>
+      <h3 className='color margen'>También te podría interesar:</h3>
       <ItemListCFetch />
       <Footer />
     </>
