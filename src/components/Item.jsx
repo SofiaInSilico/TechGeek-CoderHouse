@@ -9,6 +9,7 @@ const Item = ({nombre, imagen, precio, descripcion}) => {
                         <h5 className="card-title text-center">{nombre}</h5>
                         <p className="card-text text-center">$ {precio}</p>
                         <p className="card-text text-start"> {descripcion}</p>
+                        <a href="#" class="btn btn-dark">Ver más</a>
                         {/* <a href="#" className="btn btn-primary">Agregar al carrito</a> ----- juntar esto con el button contador*/}
                     </div>
             </div>

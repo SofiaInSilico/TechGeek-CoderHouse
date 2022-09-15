@@ -1,46 +1,23 @@
 import './App.css';
 import 'core-js/actual';
-import Footer from './components/Footer';
-import NavBar from './components/NavBar';
-import ItemListContainer from './components/ItemListContainer';
-import ItemCount from './components/ItemCount';
-// import { useState } from 'react';
-import ImgInicial from './components/ImgInicial';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Inicio from './components/Inicio';
 import ItemDetailContainer from './components/ItemDetailContainer';
-import ItemListCFetch from './components/Fetch/ItemListCFetch';
+import ItemListContainer from './components/ItemListContainer';
 
 
-
-// const Precios = () => {
-//   const [precio, setPrecio] = useState('inicial: 599 usd');
-//   return (
-//     <div className='color' onClick={() => { setPrecio('en oferta!: 500 usd') }}>
-//       <h1> Imperdibles!</h1>
-//       <p>Clickea el precio y verás nuestras ofertas!</p>
-//       <h4> Ipad Air</h4>
-//       <h5> Precio {precio}</h5>
-//     </div>
-//   );
-// }
-
-
-
-function App() {
+export default function App() {
   return (
-    <div>
-      <NavBar />
-      <ImgInicial />
-      <br />
-      <h3 className='color margen'>Nuestros productos</h3>
-      <br />
-      <ItemDetailContainer />
-      <ItemListContainer />
-      <ItemListCFetch />
-      <Footer />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route exact path='/' element={<Inicio />} />
+        {/* <Route exact path='/' element={<ItemListContainer />} /> */}
+        <Route exact path='/category/:id' element={<ItemListContainer />} />
+        <Route exact path='/item/:id' element={<ItemDetailContainer />} />
+
+      </Routes>
+    </BrowserRouter>
   );
 }
 
 
-
-export default App;

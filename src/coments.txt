@@ -80,3 +80,15 @@
     //   .then((data) => {
     //     setItems(data.results);
     //   });
+
+    // const Precios = () => {
+//   const [precio, setPrecio] = useState('inicial: 599 usd');
+//   return (
+//     <div className='color' onClick={() => { setPrecio('en oferta!: 500 usd') }}>
+//       <h1> Imperdibles!</h1>
+//       <p>Clickea el precio y verás nuestras ofertas!</p>
+//       <h4> Ipad Air</h4>
+//       <h5> Precio {precio}</h5>
+//     </div>
+//   );
+// }

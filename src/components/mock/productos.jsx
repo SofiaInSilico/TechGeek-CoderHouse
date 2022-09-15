@@ -6,7 +6,7 @@ export const productos = [
         price: 599,
         stock: 15,
         img: "https://cdn-ipoint.waugi.com.ar/20774-large_default/109-inch-ipad-air-wi-fi-64gb-space-gray.jpg",
-        description: "El nuevo iPad Air es más versátil que nunca; ahora posee una increíble pantalla Liquid Retina de 10,9 pulgadas, y el chip A14 Bionic con Neural Engine, además de ser compatible con el Magic Keyboard y el Apple Pencil (segunda generación)(2), y el TouchID. También incluye una cámara trasera de 12MP y una cámara FaceTime HD de 7 MP, un puerto USB-C para cargar el iPad Air y conectar accesorios y batería para todo el día."
+        description: "El nuevo iPad Air es más versátil que nunca; ahora posee una increíble pantalla Liquid Retina de 10,9 pulgadas, y el chip A14 Bionic con Neural Engine, además de ser compatible con el Magic Keyboard y el Apple Pencil (segunda generación)(2), y de tener TouchID. También incluye una cámara trasera de 12MP y una cámara FaceTime HD de 7 MP, y un puerto USB-C."
     },
 
 
@@ -16,7 +16,7 @@ export const productos = [
         price: 480, 
         stock: 10,
         img: "https://d500.epimg.net/cincodias/imagenes/2019/09/10/smartphones/1568121499_490816_1568143364_sumario_normal.jpg", 
-        description: "El Apple iPhone 11 Pro es el sucesor del iPhone Xs. Con una pantalla OLED Super Retina XDR, el iPhone 11 Pro está potenciado por un procesador A13 Bionic de Apple, con opciones de almacenamiento de 64GB, 256GB o 512GB. La cámara posterior del iPhpne 11 Pro es triple, de 12 MP + 12 MP + 12 MP, mientras que su cámara frontal también es de 12 MP. El iPhone 11 Pro también tiene parlantes stereo con sonido Dolby Atmos, batería con carga rápida e inalámbrica, resistencia al agua, desbloqueo facial Face ID, Apple Pay y corre iOS 13." 
+        description: "El Apple iPhone 11 Pro es el sucesor del iPhone Xs. Con una pantalla OLED Super Retina XDR, procesador A13 Bionic de Apple, con opciones de almacenamiento de 64GB, 256GB o 512GB. La cámara posterior del iPhpne 11 Pro es triple, de 12 MP + 12 MP + 12 MP, y su cámara frontal de 12 MP. Además, tiene parlantes stereo con sonido Dolby Atmos, batería con carga rápida e inalámbrica, resistencia al agua, desbloqueo facial Face ID, Apple Pay y corre iOS 13." 
     },
     { 
         id: 3, 
