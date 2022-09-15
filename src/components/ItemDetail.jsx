@@ -1,6 +1,7 @@
 import React from 'react';
 import ItemCount from './ItemCount';
 
+
 const ItemDetail = ({ item }) => {
     return (
         <div className="card mb-3">

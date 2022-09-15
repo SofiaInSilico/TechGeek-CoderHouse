@@ -7,7 +7,7 @@ const ItemFetch = ({item}) => {
                     <div className="card-body">
                         <h5 className="card-title">{item.title}</h5>
                         <p className="card-text">${item.price}</p>
-                        <a href={item.permalink} className="btn btn-dark" target='_blank'>Comprar</a>
+                        <a href={item.permalink} className="btn btn-dark" target='_blank'>Ver más</a>
                     </div>
             </div>
             );

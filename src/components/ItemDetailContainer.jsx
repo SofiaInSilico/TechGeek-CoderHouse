@@ -1,6 +1,5 @@
 import React from 'react';
-import { useState } from 'react';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { productos } from './mock/productos';
 import ItemDetail from './ItemDetail';
 import { useParams } from 'react-router-dom';
@@ -8,21 +7,26 @@ import { useParams } from 'react-router-dom';
 const ItemDetailContainer = () => {
     const [item, setItem] = useState({});
 
-    const {id} = useParams();
+    const {id} = useParams(); // funciona si lo hardcodeo, no funciona con useParams
     
     useEffect(() => {
-        const getItem = (id) => {
-           return new Promise((resolve) => {
-                const producto = (productos.find(prod => prod.id === id))
+        
+        const getItem = (id) => 
+           new Promise ((resolve, reject) => {
+                const producto = (productos.find((prod) => prod.id === Number(id)))
                 setTimeout(() => {
-                    resolve(producto)
-                }, 2000)
-            })}
+                    resolve(producto);
+                }, 2000);
+            });
             
-            getItem(id).then((respuesta) => {
-                setItem(respuesta)
+            getItem()
+            .then((response) => {
+                setItem(response);
+            }) // es un error de la respuesta?
+            .catch((error) => {
+                console.log(error);
             })
-    });
+    }, [id]);
 
     return (
         <div className="container">
