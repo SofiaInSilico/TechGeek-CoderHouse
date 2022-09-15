@@ -3,27 +3,26 @@ import { useState } from 'react';
 import { useEffect } from 'react';
 import { productos } from './mock/productos';
 import ItemDetail from './ItemDetail';
+import { useParams } from 'react-router-dom';
 
 const ItemDetailContainer = () => {
     const [item, setItem] = useState({});
 
+    const {id} = useParams();
+    
     useEffect(() => {
-        const getItem = () =>
-            new Promise((res, rej) => {
-                const producto = productos.find((prod) => prod.id === 1)
+        const getItem = (id) => {
+           return new Promise((resolve) => {
+                const producto = (productos.find(prod => prod.id === id))
                 setTimeout(() => {
-                    res(producto)
+                    resolve(producto)
                 }, 2000)
+            })}
+            
+            getItem(id).then((respuesta) => {
+                setItem(respuesta)
             })
-        getItem()
-            .then((respuesta) => {
-                setItem(respuesta);
-            })
-            .catch((error) => {
-                console.log(error);
-            })
-
-    }, []);
+    });
 
     return (
         <div className="container">

@@ -1,5 +1,4 @@
 import React from "react";
-import NavBar from "./NavBar";
 import ImgInicial from "./ImgInicial";
 import ItemListContainer from "./ItemListContainer";
 import ItemListCFetch from "./Fetch/ItemListCFetch";
@@ -9,7 +8,6 @@ import ItemDetailContainer from "./ItemDetailContainer";
 const Inicio = () => {
     return (
         <div className='container-fluid'>
-            <NavBar />
             <ImgInicial />
             <br />
             <h3 className='color margen'>Nuestros productos</h3>
