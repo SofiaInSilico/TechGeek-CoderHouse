@@ -18,7 +18,7 @@ const ItemDetailContainer = () => {
         });
 
     useEffect(() => {
-        getItem()
+        getItem(id)
             .then((response) => {
                 setItem(response);
             })
