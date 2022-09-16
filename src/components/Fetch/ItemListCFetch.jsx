@@ -9,10 +9,9 @@ const ItemListCFetch = () => {
     fetch('https://api.mercadolibre.com/sites/MLA/search?q=gamer&limit=20')
       .then((respuesta) => respuesta.json())
       .then((data) => {
-        // console.log(data.results);
         setItems(data.results);
       });
-      
+
   }, []);
 
   return (

@@ -1,7 +1,7 @@
 import React from "react";
 
 const Footer = () => {
-    return(
+    return (
         <div className='color'>
             <hr />
             <p>© Copyright InSilico 2022</p>

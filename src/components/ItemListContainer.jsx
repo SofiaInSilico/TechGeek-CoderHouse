@@ -5,16 +5,16 @@ import ItemList from "./ItemList";
 import { productos } from "./mock/productos";
 
 const ItemListContainer = () => {
- 
-    const [items, setItems] = useState ([]);
-    useEffect (() => {
 
-        const getProductos = new Promise((resolve) => {
-            setTimeout(() => {
-                resolve(productos);
-            }, 2000);  
-        });
+    const [items, setItems] = useState([]);
 
+    const getProductos = new Promise((resolve) => {
+        setTimeout(() => {
+            resolve(productos);
+        }, 2000);
+    });
+
+    useEffect(() => {
         getProductos.then((respuesta) => {
             setItems(respuesta);
         });

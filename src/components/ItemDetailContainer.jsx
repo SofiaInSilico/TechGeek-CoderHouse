@@ -7,22 +7,21 @@ import { useParams } from 'react-router-dom';
 const ItemDetailContainer = () => {
     const [item, setItem] = useState({});
 
-    const {id} = useParams(); // funciona si lo hardcodeo, no funciona con useParams
-    
+    const { id } = useParams();
+
+    const getItem = (id) =>
+        new Promise((resolve, reject) => {
+            const producto = (productos.find((prod) => prod.id === Number(id)))
+            setTimeout(() => {
+                resolve(producto);
+            }, 2000);
+        });
+
     useEffect(() => {
-        
-        const getItem = (id) => 
-           new Promise ((resolve, reject) => {
-                const producto = (productos.find((prod) => prod.id === Number(id)))
-                setTimeout(() => {
-                    resolve(producto);
-                }, 2000);
-            });
-            
-            getItem()
+        getItem()
             .then((response) => {
                 setItem(response);
-            }) // es un error de la respuesta?
+            })
             .catch((error) => {
                 console.log(error);
             })

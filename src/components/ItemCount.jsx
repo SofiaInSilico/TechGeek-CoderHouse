@@ -2,10 +2,6 @@ import React from "react";
 import { useState } from 'react';
 
 
-// function enviaMensaje() {
-//     console.log('Botón clickeado');
-//   }
-
 const ItemCount = ({ stock, initial, onAdd }) => {
     const [stockProducto, setStockProducto] = useState(stock);
     const [cantidad, setCantidad] = useState(initial);
@@ -13,13 +9,13 @@ const ItemCount = ({ stock, initial, onAdd }) => {
 
     const [fecha, setFecha] = useState(new Date());
     const subtractAmount = (valor) => {
-       if (valor > -1) {setCantidad(valor);}
+        if (valor > -1) { setCantidad(valor); }
     }
     const addAmount = (valor) => {
-        if (valor <= stockProducto) {setCantidad(valor);}
+        if (valor <= stockProducto) { setCantidad(valor); }
     }
     const agregarProductos = () => {
-        if (cantidad <= stockProducto) {        
+        if (cantidad <= stockProducto) {
             setStockProducto(stockProducto - cantidad);
             setAddProducto(addProducto + cantidad);
         }
@@ -32,11 +28,9 @@ const ItemCount = ({ stock, initial, onAdd }) => {
                 <div className='row'>
                     <div className='col-md-2'>
                         <div className="btn-group" role="group" aria-label="Basic outlined example">
-                            <button type="button" className="btn btn-outline-primary" onClick={() => 
-                            {subtractAmount(cantidad - 1)}}>-</button>
+                            <button type="button" className="btn btn-outline-primary" onClick={() => { subtractAmount(cantidad - 1) }}>-</button>
                             <button type="text" className="btn btn-outline-primary">{cantidad}</button>
-                            <button type="button" className="btn btn-outline-primary" onClick={() => 
-                                {addAmount(cantidad + 1)}}>+</button>
+                            <button type="button" className="btn btn-outline-primary" onClick={() => { addAmount(cantidad + 1) }}>+</button>
                         </div>
                         <div className='pt-2'>
                             <input className="btn btn-dark" type="submit" value="Agregar al carrito" onClick={() => {
@@ -44,7 +38,7 @@ const ItemCount = ({ stock, initial, onAdd }) => {
                                 agregarProductos()
                             }} />
                         </div>
-                        
+
                     </div>
                 </div>
             </div>
