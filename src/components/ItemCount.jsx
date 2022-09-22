@@ -3,22 +3,20 @@ import { useState } from 'react';
 
 
 const ItemCount = ({ stock, initial, onAdd }) => {
-    const [stockProducto, setStockProducto] = useState(stock);
+
     const [cantidad, setCantidad] = useState(initial);
-    const [addProducto, setAddProducto] = useState(onAdd);
 
     const [fecha, setFecha] = useState(new Date());
-    const subtractAmount = (valor) => {
-        if (valor > -1) { setCantidad(valor); }
+
+    const addAmount = () => {
+        cantidad <= stock && setCantidad(cantidad + 1);
     }
-    const addAmount = (valor) => {
-        if (valor <= stockProducto) { setCantidad(valor); }
+    const subtractAmount = () => {
+        cantidad > stock && setCantidad(cantidad - 1);
     }
-    const agregarProductos = () => {
-        if (cantidad <= stockProducto) {
-            setStockProducto(stockProducto - cantidad);
-            setAddProducto(addProducto + cantidad);
-        }
+
+    const addToCart = () => {
+        onAdd(cantidad);
     }
 
     return (
@@ -28,23 +26,31 @@ const ItemCount = ({ stock, initial, onAdd }) => {
                 <div className='row'>
                     <div className='col-md-2'>
                         <div className="btn-group" role="group" aria-label="Basic outlined example">
-                            <button type="button" className="btn btn-outline-primary" onClick={() => { subtractAmount(cantidad - 1) }}>-</button>
-                            <button type="text" className="btn btn-outline-primary">{cantidad}</button>
-                            <button type="button" className="btn btn-outline-primary" onClick={() => { addAmount(cantidad + 1) }}>+</button>
+                            <button type="button" className="btn btn-outline-primary" onClick={subtractAmount}>
+                                -
+                            </button>
+                            <button type="text" className="btn btn-outline-primary">
+                                {cantidad}
+                            </button>
+                            <button type="button" className="btn btn-outline-primary" onClick={addAmount}>
+                                +
+                            </button>
                         </div>
                         <div className='pt-2'>
-                            <input className="btn btn-dark" type="submit" value="Agregar al carrito" onClick={() => {
-                                setFecha(new Date());
-                                agregarProductos()
-                            }} />
+                            <input className="btn btn-dark" type="submit" value="Agregar al carrito"
+                                onClick={() => {
+                                    addToCart()
+                                    setFecha(new Date());
+                                }} />
                         </div>
 
                     </div>
                 </div>
             </div>
-            <p> Cantidad de productos agregados: {addProducto}</p>
-            <p> Productos restantes: {stockProducto}</p>
-            <p> Fecha: {fecha.getDate()}/{fecha.getMonth()}/{fecha.getFullYear()}  {fecha.getHours()}:{fecha.getMinutes()}:{fecha.getSeconds()}</p>
+            {/* <p> Cantidad de productos agregados: {agregarProductos}</p> */}
+            <p> Stock: {stock}</p>
+            <p> Fecha: {fecha.getDate()}/{fecha.getMonth()}/{fecha.getFullYear()} 
+            {fecha.getHours()}:{fecha.getMinutes()}:{fecha.getSeconds()}</p>
         </div>
 
     );

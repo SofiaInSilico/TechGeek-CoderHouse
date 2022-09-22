@@ -21,9 +21,14 @@ const ItemListContainer = () => {
     }, []);
 
     return (
+        <>
+        {
+            items &&
         <div className="container">
             <ItemList items={items} />
         </div>
+        }
+        </>
     )
 }
 

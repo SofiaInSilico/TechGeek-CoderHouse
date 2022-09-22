@@ -1,11 +1,17 @@
-import React from 'react';
+import React, { createContext } from 'react';
 import { useEffect, useState } from 'react';
 import { productos } from './mock/productos';
 import ItemDetail from './ItemDetail';
 import { useParams } from 'react-router-dom';
+// import { CartContext } from './context/CartContext';
+// import { useContext } from 'react';
 
 const ItemDetailContainer = () => {
-    const [item, setItem] = useState({});
+    
+    const [item, setItem] = useState();
+    // const valores = useContext(CartContext);
+    // const {cart} = useContext(CartContext) ;
+    // console.log(valores.cart.map((valor) => console.log(valor)));
 
     const { id } = useParams();
 
@@ -28,9 +34,16 @@ const ItemDetailContainer = () => {
     }, [id]);
 
     return (
-        <div className="container">
-            <ItemDetail item={item} />
-        </div>
+        <>
+            {
+                item &&
+                <div className="container">
+                    {/* <h2 onClick = {valores.cart}>{valores.cart}</h2> */}
+                    <ItemDetail item={item} />
+                </div>
+            }
+        </>
+
     );
 };
 
