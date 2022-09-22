@@ -15,7 +15,7 @@ const CartWidget = () => {
     useEffect (() => {
         let total_items = cart.reduce((total, item) => total+=item.cantidad, 0);
         setTotal(total_items);
-    }, [total]);
+    }, [cart]);
 
     return (
         <Link to={'/cart'}>
