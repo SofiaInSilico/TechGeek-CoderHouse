@@ -9,7 +9,7 @@ import { useState } from 'react';
 const ItemDetail = ({ item }) => {
 
     const [count, setCount] = useState(0);
-    const { addToCart } = useContext(CartContext);
+    const {cart, setCart, addToCart, clear} = useContext(CartContext);
 
     const onAdd = (count) => {
         setCount(count);
@@ -31,7 +31,7 @@ const ItemDetail = ({ item }) => {
                         <p className="card-text">{item.description}</p>
                     </div>
                     {count === 0 ? (
-                        <ItemCount stock={10} initial={1} onAdd={onAdd} />) :
+                        <ItemCount stock={item.stock} initial={1} onAdd={onAdd} />) :
                         (<Link to="/cart">Ir al carrito</Link>)
                     }
                 </div>

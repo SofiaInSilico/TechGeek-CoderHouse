@@ -1,6 +1,7 @@
 import React from "react";
 import Logo from "./Logo";
 import { NavLink } from "react-router-dom";
+import CartWidget from "./CartWidget";
 
 
 const NavBar = () => {
@@ -20,6 +21,7 @@ const NavBar = () => {
                             <NavLink className="nav-link active text-white" to={"/item/:id"}>Detalles</NavLink>
                         </div>
                     </div>
+                    <CartWidget />
                 </div>
             </nav>
         </div>

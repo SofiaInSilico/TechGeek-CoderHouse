@@ -38,3 +38,8 @@
     transform: rotate(360deg);
   }
 }
+
+.Cart {
+  width: 30px;
+  border-radius: 20%;
+}

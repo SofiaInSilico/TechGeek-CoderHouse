@@ -8,6 +8,7 @@ import Footer from './components/Footer';
 import ImgInicial from './components/ImgInicial';
 import ItemListCFetch from './components/Fetch/ItemListCFetch';
 import CartProvider from './components/context/CartContext';
+import Cart from './components/Cart';
 
 function App() {
 
@@ -21,7 +22,7 @@ function App() {
           <Route exact path='/' element={<ItemListContainer />} />
           <Route exact path='/category/:id' element={<ItemListContainer />} />
           <Route exact path='/item/:id' element={<ItemDetailContainer />} />
-          {/* <Route path="/cart" element = {<Cart />} /> */}
+          <Route path="/cart" element = {<Cart />} />
         </Routes>
         <h3 className='color margen'>También te podría interesar:</h3>
         <ItemListCFetch />
