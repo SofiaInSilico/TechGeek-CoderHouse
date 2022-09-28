@@ -2,10 +2,12 @@ import React from "react";
 import { useState } from 'react';
 import { useEffect } from "react";
 import ItemList from "./ItemList";
+// import Loading from "./Loading";
 import { productos } from "./mock/productos";
+// import { useContext } from "react";
 
 const ItemListContainer = () => {
-
+    // const {setLoading} = useContext(Loading);
     const [items, setItems] = useState([]);
 
     const getProductos = new Promise((resolve) => {
@@ -17,6 +19,7 @@ const ItemListContainer = () => {
     useEffect(() => {
         getProductos.then((respuesta) => {
             setItems(respuesta);
+            // setLoading(false);
         });
     }, []);
 

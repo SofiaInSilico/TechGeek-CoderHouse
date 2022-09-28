@@ -23,9 +23,11 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+
 .margen {
   margin: 15% 0 3% 3%;
 }
+
 .App-link {
   color: #61dafb;
 }
@@ -34,6 +36,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
@@ -42,4 +45,13 @@
 .Cart {
   width: 30px;
   border-radius: 20%;
+}
+
+.color {
+  color: white;
+}
+
+.remove-bg {
+  filter: brightness(1.1);
+  mix-blend-mode: multiply;
 }

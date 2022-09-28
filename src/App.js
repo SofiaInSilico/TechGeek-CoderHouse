@@ -5,27 +5,36 @@ import ItemDetailContainer from './components/ItemDetailContainer';
 import ItemListContainer from './components/ItemListContainer';
 import NavBar from './components/NavBar';
 import Footer from './components/Footer';
-import ImgInicial from './components/ImgInicial';
-import ItemListCFetch from './components/Fetch/ItemListCFetch';
+import Inicio from './components/Inicio';
 import CartProvider from './components/context/CartContext';
 import Cart from './components/Cart';
+import Checkout from './components/Checkout';
+// import Loading from './components/Loading';
+// import { useState, useEffect } from 'react';
 
 function App() {
+
+  // const [loading, setLoading] = useState(true);
+  // useEffect(() =>{
+  //   setTimeout(() => {
+  //     setLoading(false)
+  //   }, 2000);
+  // })
+
 
 
   return (
     <>
       <CartProvider>
         <NavBar />
-        <ImgInicial />
         <Routes>
-          <Route exact path='/' element={<ItemListContainer />} />
+          <Route exact path='/' element={<Inicio />} />
+          <Route exact path='/items' element={<ItemListContainer />} />
           <Route exact path='/category/:id' element={<ItemListContainer />} />
           <Route exact path='/item/:id' element={<ItemDetailContainer />} />
-          <Route path="/cart" element = {<Cart />} />
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/checkout" element={<Checkout />} />
         </Routes>
-        <h3 className='color margen'>También te podría interesar:</h3>
-        <ItemListCFetch />
         <Footer />
       </CartProvider>
     </>

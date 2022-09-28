@@ -26,12 +26,20 @@ const CartProvider = (props) => {
     }
     // console.log (cart);
 
+    const deleteOne = (id) => {
+        const prodFiltrados = cart.filter((prod) => prod.id !== id);
+        setCart(prodFiltrados);
+    };
+
     const cartTotal = () => {
         return cart.reduce((total, item) => total+=item.cantidad, 0);
     }
+    const precioFinal = () => {
+        return cart.reduce((total, item) => total+=item.cantidad*item.price, 0);
+    }
     
     return (
-        <CartContext.Provider value={{cart, addToCart, clear, isInCart}}> 
+        <CartContext.Provider value={{cart, addToCart, clear, isInCart, cartTotal, deleteOne, precioFinal}}> 
             {props.children}
         </CartContext.Provider>
     )

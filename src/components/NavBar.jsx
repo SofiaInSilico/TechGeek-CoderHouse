@@ -17,8 +17,8 @@ const NavBar = () => {
                     <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
                         <div className="navbar-nav">
                             <NavLink to={'/'} className="nav-link active text-white">Inicio</NavLink>
-                            <NavLink to={'/category/:id'} className="nav-link active text-white">Nuestros productos</NavLink>
-                            <NavLink className="nav-link active text-white" to={"/item/:id"}>Detalles</NavLink>
+                            <NavLink to={'/items'} className="nav-link active text-white">Nuestros productos</NavLink>
+                            {/* <NavLink className="nav-link active text-white" to={"/item/:id"}>Detalles</NavLink> */}
                         </div>
                     </div>
                     <CartWidget />
