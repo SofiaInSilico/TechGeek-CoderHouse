@@ -1,16 +1,13 @@
 import React from "react";
+import Logo from "../assets/imagenes/logonegro.png";
 
 
 const Loading = () => {
     return (
-        <div>
-            <div className='text-center'>
-                <div className="spinner-border" role="status">
-                    <span className="visually-hidden">Loading...</span>
-                </div>
-                <div className="spinner-grow" role="status">
-                    <span className="visually-hidden">Loading...</span>
-                </div>
+        <div className="row" role="status">
+            <div className="col-md-12 text-center p-5">
+                <p><img src={Logo} alt="Tech Geek" width="180" /></p>
+                <h3 className='color'>Cargando...</h3>
             </div>
         </div>
     )

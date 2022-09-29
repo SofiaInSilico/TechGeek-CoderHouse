@@ -4,7 +4,7 @@ import { CartContext } from "./context/CartContext";
 import trash from "../assets/imagenes/delete.png";
 import carro from "../assets/imagenes/cart3.png";
 import { Link } from "react-router-dom";
-import Checkout from "./Checkout";
+
 
 const Cart = () => {
     const { cart, deleteOne, clear, cartTotal, precioFinal } = useContext(CartContext);
@@ -43,7 +43,7 @@ const Cart = () => {
                         </tr>
                     </tbody>
                     </table>
-                    : <div className="alert alert-danger text-center" role="alert">No hay productos en el carrito {<Link to="/items">Volver a productos</Link>}</div>}
+                    : <div className="alert text-center" role="alert">No hay productos en el carrito {<Link to="/items">Volver a productos</Link>}</div>}
             </div>
         </div>
             )

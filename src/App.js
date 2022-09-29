@@ -14,15 +14,6 @@ import Checkout from './components/Checkout';
 
 function App() {
 
-  // const [loading, setLoading] = useState(true);
-  // useEffect(() =>{
-  //   setTimeout(() => {
-  //     setLoading(false)
-  //   }, 2000);
-  // })
-
-
-
   return (
     <>
       <CartProvider>
