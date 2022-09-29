@@ -24,7 +24,7 @@ export const productos = [
         price: 450,
         stock: 8,
         img: "https://www.lenovo.com/medias/22tpe14e4n1.png?context=bWFzdGVyfHJvb3R8Mjk0MjQyfGltYWdlL3BuZ3xoZWYvaDY0LzE0MTExNzE4NDczNzU4LnBuZ3w3NzUyNzZlMGRiMDNhMjRiMGE3Mzc4MDFmMGZmMDU0ZTA5NzM2OTQyOWM5YmVkNzMwZDc5NmI3NDYyNTIxZWQz",
-        descripcion: ""
+        descripcion: "Rendimiento, esencia y estilo. Procesamiento hasta Intel® Core™ i7 de 11va generación. PC liviana y elegante de 14; Encendido de un solo toque con inicio de sesión opcional. Modern Standby y teclas de control de llamadas. Sólidas funciones de seguridad. Excelente para profesionales de negocios en movimiento y estudiantes"
     },
     {
         id: 4,
@@ -32,7 +32,7 @@ export const productos = [
         price: 50,
         stock: 20,
         img: "https://http2.mlstatic.com/D_NQ_NP_835766-MLA32881918724_112019-V.jpg",
-        descripcion: ""
+        descripcion: "Auriculares para juegos Razer Kraken: marco de aluminio ligero - Micrófono retráctil con aislamiento de ruido - Para PC, PS4, PS5, Switch, Xbox One, Xbox Series X y S, móvil - Conector de auriculares de 3,5 mm - Negro clásico"
     },
     {
         id: 5,
@@ -40,6 +40,6 @@ export const productos = [
         price: 250,
         stock: 12,
         img: "https://mejortablet.com/wp-content/uploads/2020/09/samsung_galaxy_tab_s7_01.jpg",
-        descripcion: ""
+        descripcion: "Esta tablet Samsung es la compañera ideal, con capacidad de sobra para cada una de tus actividades. El diseño delgado, compacto y portátil, con facilidad para sostener en una mano, lo convierte en una combinación perfecta de rendimiento y versatilidad."
     }
 ]
