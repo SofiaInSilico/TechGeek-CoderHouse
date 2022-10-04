@@ -7,7 +7,7 @@ const Success = ({id}) => {
         <div className="row">
             <div className="col-md-12 text-center p-5">
                 <p><img src={Check} alt="TechGeek" width="180" /></p>
-                <p className="color">La Orden de compra ha sido generada. Su Id es: <b>{id}</b></p>
+                <p className="color">La Orden de compra ha sido generada. Su código de compra es: <b>{id}</b></p>
             </div>
 
         </div>
