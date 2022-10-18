@@ -14,6 +14,3 @@ Acá te dejamos un gif mostrando la navegabilidad básica del sitio:
 
 Sitio web presentado como proyecto final 
 CoderHouse - Curso de React JS
-
-
-Creado por Sofía Egaña Jiménez
