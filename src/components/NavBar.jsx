@@ -4,10 +4,11 @@ import { NavLink } from "react-router-dom";
 import CartWidget from "./CartWidget";
 
 
+
 const NavBar = () => {
     return (
         <div >
-            <nav className="navbar navbar-expand-lg">
+            <nav className="navbar navbar-expand-lg ">
                 <div className="container-fluid">
                     <NavLink to={'/'} className="navbar-link active">
                         <Logo /></NavLink>
@@ -18,7 +19,7 @@ const NavBar = () => {
                         <div className="nav justify-content-center margenNav font">
                             <NavLink to={'/'} className="nav-link active text-white">Inicio</NavLink>
                             <NavLink to={'/items'} className="nav-link active text-white">Nuestros productos</NavLink>
-                            {/* <NavLink className="nav-link active text-white" to={"/item/:id"}>Detalles</NavLink> */}
+                            <NavLink to={'/otros'} className="nav-link active text-white">Productos externos</NavLink>
                         </div>
                     </div>
                     <CartWidget />

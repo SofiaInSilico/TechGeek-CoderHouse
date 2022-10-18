@@ -9,6 +9,7 @@ import Inicio from './components/Inicio';
 import CartProvider from './components/context/CartContext';
 import Cart from './components/Cart';
 import Checkout from './components/Checkout';
+import ItemListCFetch from "./components/Fetch/ItemListCFetch";
 
 function App() {
 
@@ -23,6 +24,7 @@ function App() {
           <Route exact path='/item/:id' element={<ItemDetailContainer />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/checkout" element={<Checkout />} />
+          <Route path="/otros" element={<ItemListCFetch />} />
         </Routes>
         <Footer />
       </CartProvider>

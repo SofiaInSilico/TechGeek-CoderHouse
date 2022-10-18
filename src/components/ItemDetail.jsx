@@ -18,7 +18,7 @@ const ItemDetail = ({ item }) => {
 
 
     return (
-        <div className="card mb-3">
+        <div className="card mb-3 cardDetail">
             <div className="row g-0">
                 <div className="col-md-4">
                     <img src={item.img} className="img-fluid rounded-start" alt={item.title} />
@@ -26,8 +26,8 @@ const ItemDetail = ({ item }) => {
                 <div className="col-md-8">
                     <div className="card-body">
                         <h5 className="card-title">{item.title}</h5>
-                        <p className="card-text">$ {item.price}</p>
-                        <p className="card-text">{item.description}</p>
+                        <p className="card-text">$ {item.price} USD</p>
+                        <p className="card-text orden">{item.description}</p>
                     </div>
                     {count === 0 ? (
                         <ItemCount stock={item.stock} initial={1} onAdd={onAdd} />) :

@@ -33,8 +33,8 @@ const Cart = () => {
                                 <tr key={item.id}>
                                     <td className="text-start"><img src={item.img} alt={item.title} title={item.title} width="120" /></td>
                                     <td className="text-start align-middle">{item.title}</td>
-                                    <td className="text-end align-middle">{item.cantidad} x ${item.price}</td>
-                                    <td className="text-end align-middle">${item.cantidad * item.price}</td>
+                                    <td className="text-end align-middle">X{item.cantidad}</td>
+                                    <td className="text-end align-middle">${item.cantidad * item.price} USD</td>
                                     <td className="text-end align-middle">
                                         <Link onClick={() => { deleteOne(item.id) }}><img src={trash} alt="Eliminar producto" title="Eliminar producto" width="24" /></Link>
                                     </td>
@@ -42,7 +42,7 @@ const Cart = () => {
                             ))}
                             <tr>
                                 <td colSpan={3} className="text-end fw-bold">Precio total</td>
-                                <td className="text-end fw-bold">${precioFinal()}</td>
+                                <td className="text-end fw-bold">${precioFinal()} USD</td>
                                 <td className="text-end">
                                     <Link to={"/checkout"} title="Checkout">
                                         <button className="btn color">Comprar  <img src={carro} alt="Finalizar Compra" width="16" /></button>

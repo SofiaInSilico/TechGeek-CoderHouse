@@ -16,6 +16,7 @@ const ItemListCFetch = () => {
 
   return (
     <div className="container">
+      <h3 className='color margen'>También te podría interesar:</h3>
       <ItemListFetch items={items} />
     </div>
   );

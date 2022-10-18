@@ -9,6 +9,7 @@ const Success = ({id}) => {
                 <p><img src={Check} alt="TechGeek" width="180" /></p>
                 <p className="color">La Orden de compra ha sido generada.</p>
                 <p className="color">Su código de compra es: <b>{id}</b></p>
+                <p className="color">Hemos enviardo un mail a su correo electrónico con los datos de compra. Muchas gracias por elegirnos!</p>
             </div>
 
         </div>
