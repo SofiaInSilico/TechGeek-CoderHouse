@@ -13,8 +13,6 @@ const CartProvider = (props) => {
         } else {
             setCart([...cart, {...item, cantidad:cantidad}]);
         }
-        // const producto = {...item, cantidad };
-        // setCart([...cart, producto]);
     }
 
     const clear = () => {
@@ -24,7 +22,6 @@ const CartProvider = (props) => {
     const isInCart = (id) => {
         return cart.some(item => item.id === id);
     }
-    // console.log (cart);
 
     const deleteOne = (id) => {
         const prodFiltrados = cart.filter((prod) => prod.id !== id);
@@ -45,4 +42,3 @@ const CartProvider = (props) => {
     )
 }
 export default CartProvider;
-//todo lo que se ponga en value, será lo que se le pasará a los children

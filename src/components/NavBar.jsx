@@ -15,7 +15,7 @@ const NavBar = () => {
                         <span className="navbar-toggler-icon"></span>
                     </button>
                     <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
-                        <div className="navbar-nav">
+                        <div className="nav justify-content-center margenNav font">
                             <NavLink to={'/'} className="nav-link active text-white">Inicio</NavLink>
                             <NavLink to={'/items'} className="nav-link active text-white">Nuestros productos</NavLink>
                             {/* <NavLink className="nav-link active text-white" to={"/item/:id"}>Detalles</NavLink> */}

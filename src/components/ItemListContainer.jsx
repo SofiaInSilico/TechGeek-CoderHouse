@@ -5,20 +5,11 @@ import ItemList from "./ItemList";
 import { getFirestore, getDocs, collection, query, where } from 'firebase/firestore';
 import Loading from "./Loading";
 import { useParams } from "react-router-dom";
-// import { productos } from "./mock/productos";
-// import { useContext } from "react";
 
 const ItemListContainer = () => {
-    // const {setLoading} = useContext(Loading);
     const [items, setItems] = useState([]);
     const { id } = useParams();
     const [loading, setLoading] = useState(true);
-
-    // const getProductos = new Promise((resolve) => {
-    //     setTimeout(() => {
-    //         resolve(productos);
-    //     }, 2000);
-    // });
 
     useEffect(() => {
         const db = getFirestore();
@@ -30,26 +21,13 @@ const ItemListContainer = () => {
                 setLoading(false);
             }
         });
-        // getProductos.then((respuesta) => {
-        //     setItems(respuesta);
-        //     // setLoading(false);
-        // });
-    }, []);
+
+    }, [id]);
 
     return (
         <div className="container">
             {loading ? <Loading /> : <ItemList items={items} />}
         </div>
-
-        // <>
-
-        //     {
-        //         items &&
-        //         <div className="container">
-        //             <ItemList items={items} />
-        //         </div>
-        //     }
-        // </>
     )
 }
 

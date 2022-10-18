@@ -9,12 +9,11 @@ import { useState } from 'react';
 const ItemDetail = ({ item }) => {
 
     const [count, setCount] = useState(0);
-    const {addToCart} = useContext(CartContext);
+    const { addToCart } = useContext(CartContext);
 
     const onAdd = (count) => {
         setCount(count);
         addToCart(item, count);
-        // console.log (cantidad);
     }
 
 
@@ -34,13 +33,17 @@ const ItemDetail = ({ item }) => {
                         <ItemCount stock={item.stock} initial={1} onAdd={onAdd} />) :
                         (<Link to="/cart">Ir al carrito</Link>)
                     }
-                    <br/>
+                    <br />
                     <Link to="/items">Ver más productos</Link>
                 </div>
-                
+
+
             </div>
         </div>
     );
 };
 
 export default ItemDetail;
+
+
+

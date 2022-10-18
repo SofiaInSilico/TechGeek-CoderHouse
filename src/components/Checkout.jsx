@@ -24,7 +24,7 @@ const Checkout = () => {
             const date = new Date();
             const now = date.getDate() + "-" + (date.getMonth() + 1) + "-" + date.getFullYear() + " " + date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds();
 
-            const order = { buyer: buyer, items: items, date:now, total: precioFinal() };
+            const order = { buyer: buyer, items: items, date: now, total: precioFinal() };
             const db = getFirestore();
             const ordersCollection = collection(db, "orders");
             addDoc(ordersCollection, order).then((data) => {

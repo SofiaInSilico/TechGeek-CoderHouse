@@ -9,8 +9,6 @@ import Inicio from './components/Inicio';
 import CartProvider from './components/context/CartContext';
 import Cart from './components/Cart';
 import Checkout from './components/Checkout';
-// import Loading from './components/Loading';
-// import { useState, useEffect } from 'react';
 
 function App() {
 

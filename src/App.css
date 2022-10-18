@@ -41,7 +41,9 @@
     transform: rotate(360deg);
   }
 }
-
+.margenNav {
+  margin-left: 5%;
+}
 .Cart {
   width: 30px;
   border-radius: 20%;
@@ -51,10 +53,11 @@
   color: white;
 }
 
-.remove-bg {
+/* div#a {
   filter: brightness(1.1);
-  mix-blend-mode: multiply;
-}
+  mix-blend-mode:multiply;
+} */
+
 .marginForm{
   margin-top: 3%;
 }
@@ -62,3 +65,17 @@
 .sectionColor {
   background-color: white;
 }
+
+.font {
+  font-weight:600;
+  font-size:large;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  font-family:sans-serif
+}
+
+.cardBackground {
+  background-color: #1E1E1E;
+}
+

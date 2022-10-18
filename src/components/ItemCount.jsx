@@ -47,7 +47,6 @@ const ItemCount = ({ stock, initial, onAdd }) => {
                     </div>
                 </div>
             </div>
-            {/* <p> Cantidad de productos agregados: {agregarProductos}</p> */}
             <p> Stock: {stock}</p>
             <p> Fecha: {fecha.getDate()}/{fecha.getMonth()}/{fecha.getFullYear()} 
             {fecha.getHours()}:{fecha.getMinutes()}:{fecha.getSeconds()}</p>

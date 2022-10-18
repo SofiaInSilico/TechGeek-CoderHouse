@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-import { productos } from './mock/productos';
 import ItemDetail from './ItemDetail';
 import { useParams } from 'react-router-dom';
 import Loading from './Loading';
@@ -12,15 +11,6 @@ const ItemDetailContainer = () => {
 
     const { id } = useParams();
 
-    // const getItem = (id) =>
-    //     new Promise((resolve, reject) => {
-    //         const producto = (productos.find((prod) => prod.id === Number(id)))
-    //         setTimeout(() => {
-    //             resolve(producto);
-    //             setLoading(false);
-    //         }, 2000);
-    //     });
-
     useEffect(() => {
         const db = getFirestore();
         const respuesta = doc(db, "items", id);
@@ -29,14 +19,6 @@ const ItemDetailContainer = () => {
                 setItem({id:datos.id, ...datos.data()});
                 setLoading(false);
             }            
-
-        // getItem(id)
-        //     .then((response) => {
-        //         setItem(response);
-        //     })
-        //     .catch((error) => {
-        //         console.log(error);
-        //     })
     });       
     }, [id]);
 
