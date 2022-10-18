@@ -15,11 +15,6 @@ const Footer = () => {
             <p class="copyright">InSilico © 2022</p>
         </footer>
     </div>
-        // <div className='color'>
-        //     <hr />
-        //     <p>© Copyright InSilico 2022</p>
-        //     <p>All rights reserved</p>
-        // </div>
     )
 }
 export default Footer;
